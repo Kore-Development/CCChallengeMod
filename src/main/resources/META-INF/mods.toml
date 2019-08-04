@@ -1,0 +1,30 @@
+modLoader="javafml" #mandatory
+loaderVersion="[25,)" #mandatory (24 is current forge version)
+[[mods]] #mandatory
+modId="ccchallenge" #mandatory
+version="1.0.0" #mandatory
+displayName="ComputerCraft Challenge Mod" #mandatory
+displayURL="https://www.curseforge.com/minecraft/modpacks/computercraft-challenge" #optional
+authors="Pqtato99 (thepqtatogalaxy)" #optional
+description='''
+A mod for a modpack named ComputerCraft Challenge
+'''
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.ccchallenge]] #optional
+    # the modid of the dependency
+    modId="forge" #mandatory
+    # Does this dependency have to exist - if not, ordering below must be specified
+    mandatory=true #mandatory
+    # The version range of the dependency
+    versionRange="[25,)" #mandatory
+    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+    ordering="NONE"
+    # Side this dependency is applied on - BOTH, CLIENT or SERVER
+    side="BOTH"
+# Here's another dependency
+[[dependencies.ccchallenge]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.13.2]"
+    ordering="NONE"
+    side="BOTH"
