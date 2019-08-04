@@ -3,11 +3,22 @@ package pw.pqtato.ccchallengemod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import pw.pqtato.ccchallengemod.lists.BlockList;
+import pw.pqtato.ccchallengemod.lists.ItemList;
 
 @Mod("ccchallenge")
 public class CCChallengeMod {
@@ -29,6 +40,34 @@ public class CCChallengeMod {
 	}
 	
 	private void clientRegistries(final FMLClientSetupEvent event) {
+		logger.info("clientRegistries method registered.");
+	}
+	
+	@Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
+	public static class RegistryEvents {
+		@SubscribeEvent
+		public static void registerItems(final RegistryEvent.Register<Item> event) {
+			event.getRegistry().registerAll(
+					ItemList.gold_coin = new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("gold_coin")),
+					ItemList.rainbow_coin = new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("rainbow_coin")),
+					
+					ItemList.lamp = new ItemBlock(BlockList.lamp, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.lamp.getRegistryName())
+			);
+			
+			logger.info("Items registered");
+		}
 		
+		@SubscribeEvent
+		public static void registerBlocks(final RegistryEvent.Register<Block> event) {
+			event.getRegistry().registerAll(
+					BlockList.lamp = new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0f, 3.0f).lightValue(10).sound(SoundType.WOOD)).setRegistryName(location("lamp"))
+			);
+			
+			logger.info("Blocks registered");
+		}
+		
+		private static ResourceLocation location(String name) {
+			return new ResourceLocation(modid, name);
+		}
 	}
 }

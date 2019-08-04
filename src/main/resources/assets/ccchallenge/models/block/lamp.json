@@ -1,0 +1,153 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"wood": "block/oak_planks",
+		"lampshade": "block/purple_wool",
+		"bulb": "block/white_concrete"
+	},
+	"elements": [ 	 
+		{
+			"__comment": "lamp_base",
+			"from": [ 6, 0, 6 ],
+			"to": [ 10, 1, 10 ],
+			"faces": {
+				"down": { "uv": [ 0, 0, 4, 4 ], "texture": "#wood" },
+				"up": { "uv": [ 0, 0, 4, 4 ], "texture": "#wood" },
+				"north": { "uv": [ 2, 0, 6, 1 ], "texture": "#wood" },
+				"south": { "uv": [ 0, 3, 4, 4 ], "texture": "#wood" },
+				"west": { "uv": [ 0, 1, 4, 2 ], "texture": "#wood" },
+				"east": { "uv": [ 3, 1, 7, 2 ], "texture": "#wood" }
+			}
+		},
+		{
+			"__comment": "lamp_rod",
+			"from": [ 7.5, 1, 7.5 ],
+			"to": [ 8.5, 8, 8.5 ],
+			"faces": {
+				"down": { "uv": [ 7.5, 7.5, 8.5, 8.5 ], "texture": "#wood" },
+				"up": { "uv": [ 7.5, 7.5, 8.5, 8.5 ], "texture": "#wood" },
+				"north": { "uv": [ 7.5, 8, 8.5, 15 ], "texture": "#wood" },
+				"south": { "uv": [ 7.5, 8, 8.5, 15 ], "texture": "#wood" },
+				"west": { "uv": [ 7.5, 8, 8.5, 15 ], "texture": "#wood" },
+				"east": { "uv": [ 7.5, 8, 8.5, 15 ], "texture": "#wood" }
+			}
+		},
+		{
+			"__comment": "lampshade_1",
+			"from": [ 4, 5.5, 4 ],
+			"to": [ 12, 11, 5 ],
+			"faces": {
+				"down": { "uv": [ 4, 11, 12, 12 ], "texture": "#lampshade" },
+				"up": { "uv": [ 4, 4, 12, 5 ], "texture": "#lampshade" },
+				"north": { "uv": [ 4, 4.5, 12, 10 ], "texture": "#lampshade" },
+				"south": { "uv": [ 4, 4.5, 12, 10 ], "texture": "#lampshade" },
+				"west": { "uv": [ 4, 4.5, 5, 10 ], "texture": "#lampshade" },
+				"east": { "uv": [ 11, 4.5, 12, 10 ], "texture": "#lampshade" }
+			}
+		},
+		{
+			"__comment": "lampshade_2",
+			"from": [ 11, 5.5, 5 ],
+			"to": [ 12, 11, 11 ],
+			"faces": {
+				"down": { "uv": [ 11, 5, 12, 11 ], "texture": "#lampshade" },
+				"up": { "uv": [ 11, 5, 12, 11 ], "texture": "#lampshade" },
+				"north": { "uv": [ 4, 4.5, 5, 10 ], "texture": "#lampshade" },
+				"south": { "uv": [ 11, 4.5, 12, 10 ], "texture": "#lampshade" },
+				"west": { "uv": [ 5, 4.5, 11, 10 ], "texture": "#lampshade" },
+				"east": { "uv": [ 5, 4.5, 11, 10 ], "texture": "#lampshade" }
+			}
+		},
+		{
+			"__comment": "lampshade_3",
+			"from": [ 4, 5.5, 11 ],
+			"to": [ 12, 11, 12 ],
+			"faces": {
+				"down": { "uv": [ 4, 4, 12, 5 ], "texture": "#lampshade" },
+				"up": { "uv": [ 4, 11, 12, 12 ], "texture": "#lampshade" },
+				"north": { "uv": [ 4, 4.5, 12, 10 ], "texture": "#lampshade" },
+				"south": { "uv": [ 4, 4.5, 12, 10 ], "texture": "#lampshade" },
+				"west": { "uv": [ 11, 4.5, 12, 10 ], "texture": "#lampshade" },
+				"east": { "uv": [ 4, 4.5, 5, 10 ], "texture": "#lampshade" }
+			}
+		},
+		{
+			"__comment": "lampshade_4",
+			"from": [ 4, 5.5, 5 ],
+			"to": [ 5, 11, 11 ],
+			"faces": {
+				"down": { "uv": [ 4, 5, 5, 11 ], "texture": "#lampshade" },
+				"up": { "uv": [ 4, 5, 5, 11 ], "texture": "#lampshade" },
+				"north": { "uv": [ 11, 4.5, 12, 10 ], "texture": "#lampshade" },
+				"south": { "uv": [ 4, 4.5, 5, 10 ], "texture": "#lampshade" },
+				"west": { "uv": [ 5, 4.5, 11, 10 ], "texture": "#lampshade" },
+				"east": { "uv": [ 5, 4.5, 11, 10 ], "texture": "#lampshade" }
+			}
+		},
+		{
+			"__comment": "bulb",
+			"from": [ 7, 8, 7 ],
+			"to": [ 9, 10, 9 ],
+			"faces": {
+				"down": { "uv": [ 7, 7, 9, 9 ], "texture": "#bulb" },
+				"up": { "uv": [ 7, 7, 9, 9 ], "texture": "#bulb" },
+				"north": { "uv": [ 7, 6, 9, 8 ], "texture": "#bulb" },
+				"south": { "uv": [ 7, 6, 9, 8 ], "texture": "#bulb" },
+				"west": { "uv": [ 7, 6, 9, 8 ], "texture": "#bulb" },
+				"east": { "uv": [ 7, 6, 9, 8 ], "texture": "#bulb" }
+			}
+		},
+		{
+			"__comment": "lampshade_connector_1",
+			"from": [ 7.5, 6.5, 8.5 ],
+			"to": [ 8.5, 7.5, 11 ],
+			"faces": {
+				"down": { "uv": [ 7.5, 5, 8.5, 7.5 ], "texture": "#wood" },
+				"up": { "uv": [ 7.5, 8.5, 8.5, 11 ], "texture": "#wood" },
+				"north": { "uv": [ 7.5, 8, 8.5, 9 ], "texture": "#wood" },
+				"south": { "uv": [ 7.5, 8, 8.5, 9 ], "texture": "#wood" },
+				"west": { "uv": [ 9, 8, 11.5, 9 ], "texture": "#wood" },
+				"east": { "uv": [ 5, 8, 7.5, 9 ], "texture": "#wood" }
+			}
+		},
+		{
+			"__comment": "lampshade_connector_2",
+			"from": [ 8.5, 6.5, 7.5 ],
+			"to": [ 11, 7.5, 8.5 ],
+			"faces": {
+				"down": { "uv": [ 7.5, 5, 8.5, 7.5 ], "texture": "#wood" },
+				"up": { "uv": [ 7.5, 8.5, 8.5, 11 ], "texture": "#wood" },
+				"north": { "uv": [ 7.5, 8, 8.5, 9 ], "texture": "#wood" },
+				"south": { "uv": [ 7.5, 8, 8.5, 9 ], "texture": "#wood" },
+				"west": { "uv": [ 9, 8, 11.5, 9 ], "texture": "#wood" },
+				"east": { "uv": [ 5, 8, 7.5, 9 ], "texture": "#wood" }
+			}
+		},
+		{
+			"__comment": "lampshade_connector_3",
+			"from": [ 7.5, 6.5, 5 ],
+			"to": [ 8.5, 7.5, 7.5 ],
+			"faces": {
+				"down": { "uv": [ 7.5, 5, 8.5, 7.5 ], "texture": "#wood" },
+				"up": { "uv": [ 7.5, 8.5, 8.5, 11 ], "texture": "#wood" },
+				"north": { "uv": [ 7.5, 8, 8.5, 9 ], "texture": "#wood" },
+				"south": { "uv": [ 7.5, 8, 8.5, 9 ], "texture": "#wood" },
+				"west": { "uv": [ 9, 8, 11.5, 9 ], "texture": "#wood" },
+				"east": { "uv": [ 5, 8, 7.5, 9 ], "texture": "#wood" }
+			}
+		},
+		{
+			"__comment": "lampshade_connector_4",
+			"from": [ 5, 6.5, 7.5 ],
+			"to": [ 7.5, 7.5, 8.5 ],
+			"faces": {
+				"down": { "uv": [ 7.5, 5, 8.5, 7.5 ], "texture": "#wood" },
+				"up": { "uv": [ 7.5, 8.5, 8.5, 11 ], "texture": "#wood" },
+				"north": { "uv": [ 7.5, 8, 8.5, 9 ], "texture": "#wood" },
+				"south": { "uv": [ 7.5, 8, 8.5, 9 ], "texture": "#wood" },
+				"west": { "uv": [ 9, 8, 11.5, 9 ], "texture": "#wood" },
+				"east": { "uv": [ 5, 8, 7.5, 9 ], "texture": "#wood" }
+			}
+		}
+	]
+}
