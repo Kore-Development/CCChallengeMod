@@ -1,6 +1,9 @@
 {
 	"item.ccchallenge.gold_coin": "Gold Coin",
 	"item.ccchallenge.rainbow_coin": "Rainbow Coin",
+	"item.ccchallenge.icon": "Mod Icon",
 	
-	"block.ccchallenge.lamp": "Lamp"
+	"block.ccchallenge.lamp": "Lamp",
+	
+	"itemGroup.ccchallenge": "ComputerCraft Challenge"
 }

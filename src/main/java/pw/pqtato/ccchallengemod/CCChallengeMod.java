@@ -9,7 +9,10 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.Item.Properties;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -25,6 +28,8 @@ public class CCChallengeMod {
 	public static CCChallengeMod instance;
 	public static final String modid = "ccchallenge";
 	private static final Logger logger = LogManager.getLogger(modid);
+	
+	public static final ItemGroup ccchallenge = new CCChallengeItemGroup();
 	
 	public CCChallengeMod() {
 		instance = this;
@@ -48,10 +53,11 @@ public class CCChallengeMod {
 		@SubscribeEvent
 		public static void registerItems(final RegistryEvent.Register<Item> event) {
 			event.getRegistry().registerAll(
-					ItemList.gold_coin = new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("gold_coin")),
-					ItemList.rainbow_coin = new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("rainbow_coin")),
+					ItemList.gold_coin = new Item(new Item.Properties().group(ccchallenge)).setRegistryName(location("gold_coin")),
+					ItemList.rainbow_coin = new Item(new Item.Properties().group(ccchallenge)).setRegistryName(location("rainbow_coin")),
+					ItemList.icon = new Item(new Item.Properties()).setRegistryName(location("icon")),
 					
-					ItemList.lamp = new ItemBlock(BlockList.lamp, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.lamp.getRegistryName())
+					ItemList.lamp = new ItemBlock(BlockList.lamp, new Item.Properties().group(ccchallenge)).setRegistryName(BlockList.lamp.getRegistryName())
 			);
 			
 			logger.info("Items registered");
